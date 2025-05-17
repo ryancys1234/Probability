@@ -50,15 +50,9 @@
         \item Rearrange $\p(E \cup F) = \p(E) + \p(F) - \p(E \cap F)$.
         \item $F = (F \cap E) \cup (F \setminus E) \implies \p(F) = \p(F \cap E) + \p(F \setminus E)$ since $(F \cap E) \cup (F \setminus E) = (F \cap E) \cap (F \cap E^c) = (F \cap F) \cap (E \cap E^c) = F \cap \varnothing = \varnothing$.
     \end{enumerate}
-    \item \textbf{1.2:}
-    \item \textbf{1.3:}
-    \item \textbf{1.4:}
     \item \textbf{1.5:} Define $A_i$ as the event where the $i$th person gets their chair. Then, the desired result is $\p(\cap_{i=1}^n A_i^c = 1 - \p(\cup_{i=1}^n A_i) = 1 - \p[\Sigma_{i=1}^n \p(A_i) - \Sigma_{i<j} \p(A_i \cap A_j) + \Sigma_{i<j<k} \p(A_i \cap A_j \cap A_k) + \ldots + (-1)^{n=1} \p(\cap_{i=1}^n A_i)] = 1 - \Sigma_{i=1}^n \frac{(-1)^i}{i!}$. Notice that $\lim \limits_{n \to \infty} \Sigma_{i=1}^\infty \frac{(-1)^i}{i!} = e^{-1}$, so the probability approaches $1 - e^{-1}$ as $n \to \infty$.
-    \item \textbf{1.6:}
-    \item \textbf{1.7:}
     \item \textbf{1.8:} Let $\Omega = \{1, 2, 3\}$, $A = \varnothing$, $B = C = \{1\}$. Then $\p(A \cap B \cap C) = \p(A)\p(B)\p(C) = 0$, yet $\p(B \cap C) = \frac{1}{3} \neq \frac{1}{9} = \p(B)\p(C)$.
     \item \textbf{1.9:} $\p_B(A) = \frac{\p(A \cap B)}{\p(B)} \leq 1$ since $A \cap B \subseteq B \implies \p(A \cap B) \leq \p(B)$. $\p_B(\Omega) = \frac{\p(\Omega \cap B)}{\p(B)} = \frac{\p(B)}{\p(B)} = 1$. $\p_B(\cup_{i=1}^\infty E_i) = \frac{\p((\cup_{i=1}^\infty E_i) \cap B)}{\p(B)} = \frac{\p(\cup_{i=1}^\infty (E_i \cap B))}{\p(B)} = \frac{\Sigma_{i=1}^\infty \p(E \cap B)}{\p(B)} = \Sigma_{i=1}^\infty \p_B(E_i)$ since $(E_i \cap B) \cap (E_j \cap B) = (E_i \cap E_j) \cap (B \cap B) = \varnothing$ for $i \neq j$.
-    \item \textbf{1.10:}
 \end{itemize}
 
 \section*{July 4}
@@ -93,9 +87,7 @@
     \end{itemize}
     \item \textbf{2.2:} Sketch of proof: Only do this for $n = 2$.
     \item \textbf{2.3:} $f_{Y|X}(y|x) \propto \p_{X|Y}(x|y) f_Y(y) \propto \binom{n}{x} y^x (1 - y)^{n - x} y^{a - 1} (1 - y)^{b - 1} \propto y^{x + a - 1} (1 - y)^{n - x + b - 1}$, which means that $Y|X \sim \text{Beta}(x + a, n - x + b)$.
-    \item \textbf{2.4:}
     \item \textbf{2.5:} Sketch of proof: Notice that $f(x_1) = 1$ and $f(x_2|x_1) = \frac{1}{1 - x_1}$ for $x_2 \in (x_1, 1)$, so $f(x_2) = \int_0^{x_2} f(x_2|x_1)f(x_1)dx_1 = \frac{1}{1 - x_1} |_0^{x_2} = -\ln(1 - x_2)$ for $x_2 \in (0, 1)$. Similarly, $f(x_3|x_2) = \frac{1}{1 - x_2}$ for $x_3 \in (x_2, 1)$, so $f(x_3) = \frac{1}{2} (\ln(1 - x_3))^2$ for $x_3 \in (0, 1)$. Use induction to yield that $f(x_n) = \frac{(-1)^{n - 1}}{(n - 1)!} (\ln(1 - x_n))^{n - 1}$ for $x_n \in (0, 1)$.
-    \item \textbf{2.6:}
     \item \textbf{2.10:} If $a \leq b < c \leq d$, $\p(A \cap B) = \p(A)\p(B) \iff 0 = (b - a)(d - c) \iff a = b$ or $c = d$. If $a \leq c \leq d \leq b$, $\p(A \cap B) = \p(A)\p(B) \iff d - c = (b - a)(d - c) \iff (d - c)(b - a - 1) = 0 \iff c = d$ or $a = 0, b = 1$. If $a \leq c \leq b \leq d$, $\p(A \cap B) = \p(A)\p(B) \iff b - c = (b - a)(d - c)$. 
 \end{itemize}
 
@@ -126,12 +118,7 @@
 
 \subsection*{Questions}
 \begin{itemize}
-    \item \textbf{3.1:}
-    \begin{itemize}
-        \item Theorem 3.2.8: ii) Since $f$ is continuous, $\forall \varepsilon > 0, \exists \delta > 0$ s.t. $|X_n - X| \leq \delta \implies |f(X_n) - f(X)| \leq \varepsilon$. By assumption, $1 = \lim \limits_{n \to \infty} \p(|X_n - X| \leq \delta) \leq \lim \limits_{n \to \infty} \p(|f(X_n) - f(X)| \leq \varepsilon)$.
-    \end{itemize}
-    \item \textbf{3.2:}
-    \item \textbf{3.4:}
+    \item \textbf{3.1:} Theorem 3.2.8: ii) Since $f$ is continuous, $\forall \varepsilon > 0, \exists \delta > 0$ s.t. $|X_n - X| \leq \delta \implies |f(X_n) - f(X)| \leq \varepsilon$. By assumption, $1 = \lim \limits_{n \to \infty} \p(|X_n - X| \leq \delta) \leq \lim \limits_{n \to \infty} \p(|f(X_n) - f(X)| \leq \varepsilon)$.
     \item \textbf{3.5:} Observe that $\forall \varepsilon > 0, \lim \limits_{n \to \infty} X_n = X \implies \lim \limits_{n \to \infty} |X_n - X| = 0 \implies \lim \limits_{n \to \infty} |X_n - X| < \varepsilon \implies \{\exists k$ s.t. $\forall n \geq k, |X_n - X| < \varepsilon\} \implies |X_n - X| < \varepsilon$ a.a. Taking the probability of these yields $\p(|X_n - X| < \varepsilon$ a.a.$) \geq 1$.
     \item \textbf{3.10:} $\{w \in \Omega: \Sigma_{i=1}^\infty X_i(w) = \infty\} \iff (\exists k \in \mathbb{N}$ s.t. $\forall n \in \mathbb{N}, \exists i \geq n$ s.t. $X_i \geq \frac{1}{k}) \iff \cup_{k=1}^\infty \cap_{n=1}^\infty \cup_{i=n}^\infty \{X_i \geq \frac{1}{k}\} = A$. For $K$ such that $\delta \geq \frac{1}{K}$, define $A_K = \cap_{n=1}^\infty \cup_{i=n}^\infty \{X_i(w) \geq \frac{1}{K}\} \subseteq A$. Notice that $\p(X_i \geq \frac{1}{K}) \geq \p(X_i \geq \delta) \geq \varepsilon \implies \Sigma_{i=1}^\infty \p(X_i \geq \frac{1}{K}) \geq \Sigma_{i=1}^\infty \varepsilon = \infty$, so by Borel-Cantelli, $1 = \p(X_i \geq \frac{1}{K}$ i.o.$) = \p(A_K) \leq \p(A)$. Alternatively, notice that $X_i \geq \delta$ i.o. $\implies \Sigma_{i=1}^\infty X_i = \infty$.
 \end{itemize}
@@ -161,7 +148,6 @@
         \item Lemma 4.1.8: iv) $Y - X \geq 0$ a.s. $\implies \E(Y - X) \geq 0 \implies \E(Y + (-X)) = \E(Y) + \E(-X) = \E(Y) - \E(X) \geq 0$. v) $\E(Y - X) = \E(Y + (-X)) = \E(Y) + \E(-X) = \E(Y) - \E(X) = \E(X) - \E(X) = 0$. vi) $\E(X) \leq \E(|X|)$ since $X \leq |X|$ and $\E(X) \geq \E(-|X|) = -\E(|X|)$ since $X \geq -|X|$.
         \item Lemma 4.4.4: $M_S(\lambda) = \E(\exp\{\lambda \Sigma_{i=1}^n X_i\}) = \E(\Pi_{i=1}^n \exp\{\lambda X_i\}) = \Pi_{i=1}^n \E(\exp\{\lambda X_i\})$ by Theorem 4.1.12 since $M_{X_i}(\lambda) < \infty$ and functions of independent random variables are independent.
     \end{itemize}
-    \item \textbf{4.2:}
     \item \textbf{4.5:} The MGF of the Poisson distribution is $M_{X}(t) = \E(e^{tX}) = \exp(\lambda(e^t - 1))$ for some $X \sim$ Poisson$(\lambda)$. Notice that $\forall t, M_{X}(t) < \infty$. By Lemma 4.4.4, for $S = \Sigma_{i=1}^n X_i$, $M_S(t) = \Pi_{i=1}^n M_{X_i}(t) = \Pi_{i=1}^n \exp(\lambda(e^t - 1)) = \exp(\Sigma_{i=1}^n \lambda(e^t - 1)) = \exp(n\lambda(e^t - 1))$, which is the MGF for some $Y \sim$ Poisson$(n\lambda)$. By Theorem 4.4.3, $S$ and $Y$ have the same distribution.
     \item \textbf{4.6:} The MGF of the exponential distribution is $M_{X}(t) = \E(e^{tX}) = \frac{\lambda}{\lambda - t}$ for some $X \sim$ Exp$(\lambda)$. Notice that $\forall t < \lambda, M_{X}(t) < \infty$. By Lemma 4.4.4, for $S = \Sigma_{i=1}^n X_i$, $M_S(t) = \Pi_{i=1}^n M_{X_i}(t) = \Pi_{i=1}^n \frac{\lambda}{\lambda - t} = (\frac{\lambda}{\lambda - t})^n = (\frac{\lambda - t}{\lambda})^{-n} = (1 - \frac{t}{\lambda})^{-n}$, which is the MGF for some $Y \sim$ Expo$(n, \lambda)$. Additionally, $\forall t < \lambda, M_{S}(t) < \infty$. By Theorem 4.4.3, $S$ and $Y$ have the same distribution.
     \item \textbf{4.8:} Define $Y = X^2$, so $F_Y(y) = \p(X^2 \leq y) = \p(-\sqrt{y} \leq X \leq \sqrt{y}) = \int_{-\sqrt{y}}^{\sqrt{y}} \frac{1}{\sqrt{2\pi}} e^{-x^2/2}dx \implies f_Y(y) = \frac{d}{dy} [\int_0^{\sqrt{y}} \frac{1}{\sqrt{2\pi}} e^{-x^2/2}dx - \int_0^{-\sqrt{y}} \frac{1}{\sqrt{2\pi}} e^{-x^2/2}dx] = \frac{1}{\sqrt{2\pi y}} e^{-y/2} = \frac{(1/2)^{1/2}}{\Gamma(1/2)} y^{(1/2)-1} e^{-(1/2)y}$. By Proposition 2.2.19, $Y \sim$ Gamma$(\frac{1}{2}, \frac{1}{2})$, and its MGF is $M_Y(\lambda) = \E(e^{\lambda Y}) = (1 - \frac{\lambda}{1/2})^{-1/2} < \infty$ for $\lambda < \frac{1}{2}$. By Lemma 4.4.4, $M_{\chi^2}(\lambda) = \Pi_{i=1}^n M_{Y_i}(\lambda) = (1 - \frac{\lambda}{1/2})^{-n/2}$, which is the MGF for some $Z \sim$ Gamma$(\frac{n}{2}, \frac{1}{2})$. Additionally, $\forall \lambda < \frac{1}{2}, MGF_{\chi^2}(\lambda) < \infty$. By Theorem 4.4.3, $Z$ and $\chi^2$ have the same distribution.
@@ -174,11 +160,8 @@
     \end{itemize}
     \item \textbf{4.11:} By question 4.10, $\V(X) = \E(X - \E(X))^2 \iff (X - \E(X))^2 = 0$ a.s. $\iff X - \E(X) = 0$ a.s. $\iff X = \E(X)$ a.s. The result follows if $a = \E(X)$.
     \item \textbf{4.12:} $\mu = \E(X) = \E(X\mathbb{I}(X < \mu)) + \E(X\mathbb{I}(X \geq \mu) < \E(\mu\mathbb{X < \mu}) + \E(X\mathbb{X \geq \mu}) \leq \mu\p(X < \mu) + \E(X\mathbb{X \geq \mu}) \leq \mu + \E(X\mathbb{I})$. Notice that $\E(\mathbb{I}(X \geq \mu)) \implies \mathbb{I}(X \geq \mu) = 0$ a.s. by question 4.10 $\implies \E(X\mathbb{I}(X \geq \mu) = 0$, so $\mu < \mu$, which is a contradiction. Alternatively, $X < \E(X)$ a.s. $\implies \E(X) < \E(\E(X)) = \E(X)$, a contradiction.
-    \item \textbf{4.13:}
-    \item \textbf{4.15:}
     \item \textbf{4.16:} Define $X_n = \Sigma_{k=1}^n \I(X \geq k) \nearrow X$. Since $X_n \geq 0$ a.s., by the MCT, $\E(X_n) \uparrow \E(X)$. Notice that $\lim \limits_{n \to \infty} \E(X_n) = \lim \limits_{n \to \infty} \E(\Sigma_{k=1}^n \I(X \geq k)) = \lim \limits_{n \to \infty} \Sigma_{k=1}^n \E(\I(X \geq k))$ by property iii) of Proposition 4.1.7 since the sum is finite $= \lim \limits_{n \to \infty} \Sigma_{k=1}^n \p(X \geq k) = \Sigma_{k=1}^\infty \p(X \geq k)$. Thus, $\E(X) = \Sigma_{k=1}^\infty \p(X \geq k)$.
     \item \textbf{4.17:} Assuming $X$ has a PDF $f_X$, we have $\int_0^\infty px^{p - 1} \p(X \geq x)dx = \int_0^\infty px^{p - 1} \E[\mathbb{I}(X \geq x)]dx = \int_0^\infty px^{p - 1} \int_{-\infty}^\infty \mathbb{I}(y \geq x)f_X(y)dydx = \int_0^\infty \int_{-\infty}^\infty px^{p - 1} \mathbb{I}(y \geq x)f_X(y)dydx = \int_0^\infty \int_x^\infty px^{p - 1}f_X(y)dydx = \int_0^\infty \int_0^y px^{p - 1} f_X(y)dxdy$ by Fubini's theorem $= \int_0^\infty [\int_0^y px^{p - 1} dx] f_X(y)dy = \int_0^\infty y^p f_X(y)dy = \E(X^p)$.
-    \item \textbf{4.19:}
 \end{itemize}
 
 \section*{July 16}
@@ -199,7 +182,6 @@
 \subsection*{Questions}
 \begin{itemize}
     \item \textbf{5.2:} $\Sigma_{n=1}^\infty \p(X_n \geq n) \leq \Sigma_{n=1}^\infty \p(|X_n| \geq n) \leq \Sigma_{n=1}^\infty \frac{\V(X_n)}{n^2}$ by Chebyshev's inequality $= \Sigma_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6} < \infty$. By Borel-Cantelli, $\p(X_n \geq n$ i.o.$) = 0$.
-    \item \textbf{5.3:}
     \item \textbf{5.4:} Sketch of proof: Show that $\log(\lambda x + (1 - \lambda)y) \geq \lambda\log(x) + (1 - \lambda)\log(y)$.
     \item \textbf{5.5:} It suffices to show that $f(x) = \max\{x, 0\}$ is convex since $\max\{x, a\} = \max\{x - a, 0\}$. For $x, y \leq 0$, $f(\lambda x + (1 - \lambda)y) = 0 \leq \lambda f(x) + (1 - \lambda)f(y) = 0$. For $x, y > 0$, $f(\lambda x + (1 - \lambda)y) = \lambda x + (1 - \lambda)y \leq f(\lambda x) + f((1 - \lambda)y) = \lambda x + (1 - \lambda)y$. For $x \leq 0, y > 0$, either $\lambda x + (1 - \lambda)y \leq 0$, in which case $f(\lambda x + (1 - \lambda)y) = 0 \leq \lambda f(x) + (1 - \lambda)f(y) = (1 - \lambda)y$ since $f(x) = 0$ and $f(y) = y$, or $\lambda x + (1 - \lambda)y > 0$, in which case $f(\lambda x + (1 - \lambda)y) = \lambda x + (1 - \lambda)y \leq (1 - \lambda)y$ since $x < 0$. The result directly follows from Jensen's inequality.
 \end{itemize}
@@ -227,9 +209,6 @@
     \item \textbf{5.9:} Not testable.
     \item \textbf{5.11:} Define $X_n = n$ with probability $\frac{1}{n}$ and 0 with probability $1-\frac{1}{n}$. $\forall \varepsilon > 0, \lim \limits_{n\to\infty} \p(|X_n/n| \geq \varepsilon) = \lim \limits_{n\to\infty} \p(X_n/n = 1) = \lim \limits_{n\to\infty} \frac{1}{n} = 0 \implies X_n/n \overset{p}{\to} 0$. Also, $\p(\lim \limits_{n\to\infty} X_n/n^2 \leq \lim \limits_{n\to\infty} \frac{n}{n^2} = 0) = 1 \implies X_n/n^2 \to 0$ a.s. However, $\forall \varepsilon > 0, \Sigma_{n=1}^\infty \p(X_n/n > \varepsilon) = \Sigma_{n=1}^\infty \p(X_n/n = 1) = \Sigma_{n=1}^\infty \frac{1}{n} = \infty \implies \p(X_n/n > \varepsilon$ i.o.$) = 1$ by Borel-Cantelli since the $X_n$'s are independent $ \implies \p(X_n/n \to 0) = 0 < 1$.
     \item \textbf{6.3:} By question 4.17, $\E|X_1| = \int_0^\infty \p(|X_1| \geq x)dx \geq \int_e^\infty \p(X_1 > x)dx = \int_e^\infty \frac{e}{x\log x}dx = \infty$. Since $X$ can only take values in $[e,\infty)$, $\lim \limits_{x\to\infty} x\p(|X_1| > x) = \lim \limits_{x\to\infty} x\p(X_1 > x) = \lim \limits_{x\to\infty} \frac{e}{\log x} = 0$, so the result follows by Theorem 6.2.3.
-    \item \textbf{6.4:}
-    \item \textbf{6.5:}
-    \item \textbf{6.6:}
 \end{itemize}
 
 \section*{July 30}
@@ -247,8 +226,6 @@
     \item \textbf{7.3:} For $x^+ = \max(x,0), x^- = \max(-x,0)$, notice that $x^+ + x^- = |x|, x^+ - x^- = x$, and $(-x)^+ = x^-$. For any continuity point $y$, $|F_n(y) - F(y)| = |\Sigma_{-\infty}^y (p_n(x) - p(x))| \leq \Sigma_{-\infty}^y |p_n(x) - p(x)| \leq \Sigma_{-\infty}^\infty |p_n(x) - p(x)| = \Sigma_{-\infty}^\infty (p_n(x) - p(x))^+ + \Sigma_{-\infty}^\infty (p_n(x) - p(x))^- = \Sigma_{-\infty}^\infty [p_n(x) - p(x) + (p_n(x) - p(x))^-] + \Sigma_{-\infty}^\infty (p_n(x) - p(x))^- = 2\Sigma_{-\infty}^\infty (p_n(x) - p(x))^- = \Sigma_{-\infty}^\infty (p(x) - p_n(x))^+$. Since $(p(x) - p_n(x))^+ \leq (p(x))^+ = p(x)$, by DCT, $\lim \limits_{n\to\infty} (p(x) - p_n(x))^+ = 0$.
     \item \textbf{7.4:} Define $S_1 = [0,1], S_2 = [0,\frac{1}{2}], S_3 = [\frac{1}{2},1], S_4 = [0, \frac{1}{3}], S_5 = [\frac{1}{3}, \frac{2}{3}]$, and so on. Define $X_n$ such that $f_n$ is uniform on $[0,1] \setminus S_n$. Since $\mu(S_n) \to 0$ as $n \to \infty$, $X_n \overset{D}{\to}$ Unif$(0,1)$. However, for any $x \in [0,1]$, there are infinitely many $n$ such that $x \in S_n \iff f_n(x) = 0$.
     \item \textbf{7.5:} Not testable.
-    \item \textbf{7.6:}
-    \item \textbf{7.7:}
     \item \textbf{7.9:}
     \begin{itemize}
         \item Bernoulli: $\E e^{itx} = pe^{it} + (1-p)e^0$.
